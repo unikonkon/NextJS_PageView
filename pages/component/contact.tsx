@@ -9,13 +9,13 @@ export default function contact() {
   return (
     <div>
           <Row css={{pt:201,pb:200}}>
-         <div>
+         <Col css={{ pl:120,}}>
             <Col css={{pl:100}}>
             <Image src="/Bicycle.png" width={719} height={423} className="rounded-full " alt={""} /> 
             </Col>
             
-        </div> 
-        <div>
+        </Col> 
+        <Col css={{ pl:120,}}>
         <Text css={{ pb:20, fontSize: '3.75rem',}}>ติดต่อเรา</Text>
            <Grid>
               <Input
@@ -71,12 +71,11 @@ export default function contact() {
             <br/>
             is simply Lorem Ipsum is simply 
             </Text>
-            <Container></Container>
-            <Container css={{justify:'center'}}>
+            <Row css={{}}>
             <Button css={{ color: '#707070', fontSize: '1rem',}}>LOREM</Button>
-            </Container>
+            </Row>
           
-        </div>
+        </Col>
      
      </Row>
 

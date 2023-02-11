@@ -25,7 +25,7 @@ export default function title() {
           <br/>
           printing and typesetting industry.Lorem Ipsum 
           <br/>
-          has been the industry's    
+          has been the industry&apos;s    
           </Text>
         </div>
         <div>
