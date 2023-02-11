@@ -4,7 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Text,Textarea, Row,Col,Grid,Spacer,Button, Container,Input,Popover } from "@nextui-org/react";
 import Image from 'next/image'
 
-export default function contact() {
+export default function Contact() {
     const [value, onChange] = useState(new Date());
   return (
     <div>
