@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { Text,Textarea, Row,Col,Grid,Spacer,Button, Container,Input,Popover } from "@nextui-org/react";
+import { Text, Row,Col,Grid,Spacer,Button,Input,Popover } from "@nextui-org/react";
 import Image from 'next/image'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import { Box } from '@mui/material';
 
 export default function Contact() {
     const [value, onChange] = useState(new Date());
   return (
     <div>
-          <Row css={{pt:201,pb:200}}>
+          <Row css={{pt:201,pb:200,}}>
          <Col css={{ pl:120,}}>
             <Col css={{}}>
             <Image src="/Bicycle.png" width={719} height={423}  alt={""} /> 
@@ -18,7 +17,7 @@ export default function Contact() {
             
         </Col> 
         <Col css={{ pl:120,}}>
-        <Text css={{ pb:20, fontSize: '3.75rem',}}>ติดต่อเรา</Text>
+        <Text weight="bold" css={{ pb:20, fontSize: '3.75rem',}}>ติดต่อเรา</Text>
            <Grid>
               <Input
                 clearable
@@ -67,9 +66,9 @@ export default function Contact() {
                             />                        
                     </Popover.Content>
                 </Popover>}
-                />
+                />    
+            </Row> 
             
-            </Row>
             <Spacer y={1.5} />
             <Text css={{ fontSize: '1rem',}}>
             Lorem Ipsum is simply Lorem Ipsum 

@@ -1,12 +1,10 @@
-import { Navbar, Button, Link, Text,Dropdown, useTheme, Container } from "@nextui-org/react";
+import { Navbar, Text,Dropdown, useTheme, } from "@nextui-org/react";
 import Image from 'next/image'
-import DensityMediumIcon from '@mui/icons-material/DensityMedium';
+
 
 export default function Nav() {
-  const { isDark } = useTheme();
 
   return (
-
       <Navbar  variant="sticky" height={120}>
         <Navbar.Brand>
         <Image src="/logo.png" width={74} height={87} className="rounded-full " alt={""} /> 
@@ -17,10 +15,7 @@ export default function Nav() {
           <Text style={{ fontStyle: 'italic' }} css={{color: '#D9EF0C', fontSize: '1.5rem', padding: '$2 $4'}}>
            IPSUM
           </Text>
-     
-       
-        </Navbar.Brand>
-        <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline" >
+          <Navbar.Content enableCursorHighlight hideIn="xs" variant="underline"  css={{pl:107}} >
           <Navbar.Link href="#">LOREM</Navbar.Link>
           <Dropdown isBordered>
             <Navbar.Item>
@@ -76,6 +71,8 @@ export default function Nav() {
           <Navbar.Link href="#">LOREM & IPSUM</Navbar.Link>
           <Navbar.Link href="#">LOREM</Navbar.Link>
         </Navbar.Content>
+        </Navbar.Brand>
+
 
       </Navbar>
 

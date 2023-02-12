@@ -1,17 +1,18 @@
 import Nav from "./component/navbar";
-import { createTheme, NextUIProvider,Container,Col } from "@nextui-org/react"
-import Image from 'next/image'
+import { createTheme, NextUIProvider, } from "@nextui-org/react"
 import Title from "./component/title";
 import DataAPI from "./component/dataAPI";
 import Contact from "./component/contact";
+
+
 const theme = createTheme({
-  type: "dark", // it could be "light" or "dark"
+  type: "dark", 
   theme: {
     colors: {
       primary: '#4ADE7B',
       secondary: '#F9CB80',
       error: '#FCC5D8',
-    },
+    }, 
   }
 })
 interface Product {
@@ -42,12 +43,12 @@ function Products({ products }: ProductsProps): JSX.Element {
   
   return (
     <NextUIProvider theme={theme}>
-     <div className="bg-slate-800" >
+    
       <Nav/>
       <Title/>  
       <DataAPI products={products}/>  
       <Contact/>
-    </div>
+    
     </NextUIProvider>
   
   );
