@@ -47,7 +47,7 @@ export default function title() {
         <Text css={{pt:20,pb:225,textAlign:'center', fontSize: '1.125rem', }}>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
         <br/>
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took 
+        been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took 
         <br/>
         a galley of type and scrambled it to make a type specimen book.
         </Text>
