@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Text,Textarea, Row,Col,Grid,Spacer,Button, Container,Input,Popover } from "@nextui-org/react";
 import Image from 'next/image'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import { Box } from '@mui/material';
 
 export default function Contact() {
     const [value, onChange] = useState(new Date());
@@ -11,8 +12,8 @@ export default function Contact() {
     <div>
           <Row css={{pt:201,pb:200}}>
          <Col css={{ pl:120,}}>
-            <Col css={{pl:100}}>
-            <Image src="/Bicycle.png" width={719} height={423} className="rounded-full " alt={""} /> 
+            <Col css={{}}>
+            <Image src="/Bicycle.png" width={719} height={423}  alt={""} /> 
             </Col>
             
         </Col> 
@@ -49,24 +50,23 @@ export default function Contact() {
                 <Input
                 clearable
                 underlined
-                placeholder="วันที่ 04/08/2022"
-                css={{width:400,fontSize: '1.125rem',}} 
-                contentRight={  
-                <Popover placement="bottom-right" >
+                labelPlaceholder="วันที่ 04/08/2022"
+                css={{width:400,fontSize: '1.125rem', }} 
+                contentRightStyling={false}
+                contentRight={          
+                    <Popover placement="bottom-right" >
                     <Popover.Trigger >
-                        <Button light auto css={{mr:50}}>
-                        <CalendarMonthIcon/>
+                        <Button light auto>
+                        <CalendarMonthIcon />
                         </Button>   
                     </Popover.Trigger>
-                    <Popover.Content>
+                    <Popover.Content css={{ color: '#272727' }}>
                             <Calendar
                                 onChange={onChange}
                                 value={value}
                             />                        
                     </Popover.Content>
-                </Popover>
-
-                }
+                </Popover>}
                 />
             
             </Row>
@@ -77,7 +77,9 @@ export default function Contact() {
             is simply Lorem Ipsum is simply 
             </Text>
 
-            <Button  color="warning" css={{  mt:75, fontSize: '1rem',}}>LOREM</Button>
+            <Button  color="warning" css={{  mt:75, fontSize: '1rem', }}>
+            <Text css={{color: '#000000',}}>LOREM</Text> 
+            </Button>
            
           
         </Col>

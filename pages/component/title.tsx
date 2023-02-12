@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text,Container, Row,Col,Grid, } from "@nextui-org/react";
+import { Text,Container, Row,Col,Grid,Card } from "@nextui-org/react";
 import Image from 'next/image'
 export default function title() {
   return (
@@ -35,6 +35,7 @@ export default function title() {
             
         </div>         
       </Row>
+     
       <Row justify="center">
       <Text weight="bold" css={{ textAlign:'center', pb:64, fontSize: '3.75rem', pt:200}}>LOREM IPSUM </Text>
       <Text weight="bold" css={{ color: '#D9EF0C', pl:14, textAlign:'center', pb:64, fontSize: '3.75rem', pt:200}}>LOREM</Text>
