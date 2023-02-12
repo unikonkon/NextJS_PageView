@@ -3,6 +3,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { Text,Textarea, Row,Col,Grid,Spacer,Button, Container,Input,Popover } from "@nextui-org/react";
 import Image from 'next/image'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 export default function Contact() {
     const [value, onChange] = useState(new Date());
@@ -48,32 +49,36 @@ export default function Contact() {
                 <Input
                 clearable
                 underlined
-                labelPlaceholder="วันที่"
-                css={{width:360,fontSize: '1.125rem',}} 
+                placeholder="วันที่ 04/08/2022"
+                css={{width:400,fontSize: '1.125rem',}} 
+                contentRight={  
+                <Popover placement="bottom-right" >
+                    <Popover.Trigger >
+                        <Button light auto css={{mr:50}}>
+                        <CalendarMonthIcon/>
+                        </Button>   
+                    </Popover.Trigger>
+                    <Popover.Content>
+                            <Calendar
+                                onChange={onChange}
+                                value={value}
+                            />                        
+                    </Popover.Content>
+                </Popover>
+
+                }
                 />
-            <Popover placement="bottom-right">
-            <Popover.Trigger>
-                <Button auto flat></Button>
-            </Popover.Trigger>
-            <Popover.Content>
-            <div>
-                    <Calendar
-                        onChange={onChange}
-                        value={value}
-                    />
-                </div>
-            </Popover.Content>
-            </Popover>
+            
             </Row>
             <Spacer y={1.5} />
-            <Text css={{color: '#707070', fontSize: '1rem',}}>
+            <Text css={{ fontSize: '1rem',}}>
             Lorem Ipsum is simply Lorem Ipsum 
             <br/>
             is simply Lorem Ipsum is simply 
             </Text>
-            <Row css={{}}>
-            <Button css={{ color: '#707070', fontSize: '1rem',}}>LOREM</Button>
-            </Row>
+
+            <Button  color="warning" css={{  mt:75, fontSize: '1rem',}}>LOREM</Button>
+           
           
         </Col>
      

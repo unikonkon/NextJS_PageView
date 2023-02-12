@@ -17,8 +17,8 @@ const theme = createTheme({
 interface Product {
   id: number;
   title: string;
-  description: String;
-  thumbnail: String;
+  description: string;
+  thumbnail: string;
 
 }
 

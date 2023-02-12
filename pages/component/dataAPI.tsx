@@ -3,7 +3,7 @@ import Image from 'next/image'
 interface Product {
   id: number;
   title: string;
-  description: String;
+  description: string;
 }
 
 interface ProductsProps {
@@ -12,12 +12,13 @@ interface ProductsProps {
 
 export default function DataAPI({ products }: ProductsProps): JSX.Element {
     // console.log(products)
+
   return (
-    <Container css={{mt:100}}>
+    <Container >
         <Text css={{ textAlign:'center', pb:64, fontSize: '3.75rem',}}>LOREM IPSUM</Text>   
         <Grid.Container gap={2} justify="center" >
             {products.map(product => (
-                <Grid xs={4} key={product.id} css={{width:416, height:380, }}>
+                <Grid xs={12} sm={6} md={4} key={product.id} css={{width:416, height:380, }}>
                 <Card >
                 <Card css={{alignItems:'center'}} >
                 <Image src="/rectangle.png" width={416} height={236}  alt={""} /> 
